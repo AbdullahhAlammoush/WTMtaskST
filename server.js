@@ -16,13 +16,18 @@ app.use(cors());
 const loginRouter = require("./routes/login");
 const createNewUserRouter = require("./routes/signUpR");
 const wR = require("./routes/weatherR");
-
+const sendrouter = require("./routes/send");
+const WeatherApiForACity = require("./routes/weatherCityR");
+const tokenRouter = require("./routes/tokR");
 //////////////////////////////////////////////
 
 //routes middleware
 app.use("/login", loginRouter);
 app.use("/user", createNewUserRouter);
+app.use("/send", sendrouter);
 app.use("/w", wR);
+app.use("/wCity", WeatherApiForACity);
+app.use("/token", tokenRouter);
 
 /////////////////////////////////////////////
 
