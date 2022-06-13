@@ -8,9 +8,7 @@ const WeatherApi = (req, res) => {
     )
     .then((result) => {
       console.log(result.data);
-      // const any=result.data
       res.status(200).json({ result: result.data });
-      // setLocation(result.data.current.location.region);
     })
     .catch((err) => {
       console.log(err);
@@ -25,9 +23,7 @@ const WeatherApiForACity = (req, res) => {
     )
     .then((result) => {
       console.log(result.data);
-      // const any=result.data
       res.status(200).json({ result: result.data });
-      // setLocation(result.data.current.location.region);
     })
     .catch((err) => {
       console.log(err);

@@ -7,9 +7,6 @@ const resetPass = (req, res) => {
   userModel
     .find({ email: email })
     .then((result) => {
-      if (result) {
-        // tokenModel.find({ email: email }).then()
-      }
       res.status(200).json({ success: true, result: result });
     })
     .catch((err) => {

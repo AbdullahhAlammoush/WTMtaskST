@@ -5,7 +5,6 @@ const tokenModel = require("../database/models/tok");
 const signUp = (req, res, next) => {
   const { firstName, lastName, email, password, token } = req.body;
   const tokenn = req.headers.authorization.split(" ").pop();
-  // const tokLocal = localStorage.setItem("token", tokenn);
   const user = new userModel({
     firstName,
     lastName,
